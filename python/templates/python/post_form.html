@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Create</title>
+</head>
+<body>
+  <form method="post" enctype="multipart/form-data">{% csrf_token %}
+    {{ form.title }}
+    {{ form.category }}
+    {{ form.subject }}
+    {{ form.content }}
+    <button type="submit">GO!</button>
+  </form>
+</body>
+</html>
