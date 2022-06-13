@@ -1,16 +1,10 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <title>Title</title>
-</head>
-<body>
+{% extends 'python/base.html' %}
+{% block 'main_area' %}
   {% for post in post_list %}
     <h1>{{ post.title }}</h1>
     <h5>{{ post.created_at }}</h5>
     <h3>{{ post.content | safe }}</h3>
     <br>
   {% endfor %}
-  <a href="/create/" type="button">write</a>
-</body>
-</html>
+  <a href="create/" type="button">write</a>
+{% endblock %}

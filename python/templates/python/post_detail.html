@@ -1,11 +1,5 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <title>Post</title>
-</head>
-<body>
+{% extends 'python/base.html' %}
+{% block 'main_area' %}
   {{ post.title }}<br>
   {{ post.content | safe }}<br>
-</body>
-</html>
+{% endblock %}
