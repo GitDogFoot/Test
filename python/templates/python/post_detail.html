@@ -1,5 +1,8 @@
 {% extends 'python/base.html' %}
 {% block 'main_area' %}
-  {{ post.title }}<br>
-  {{ post.content | safe }}<br>
+<div class="post_detail">
+  <h1>{{ post.title }}</h1>
+  <p>{{ post.created_at }}</p><br>
+  <h3>{{ post.content | safe }}</h3>
+</div>
 {% endblock %}

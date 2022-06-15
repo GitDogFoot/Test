@@ -1,0 +1,26 @@
+html {}
+
+body {}
+
+div.form_group {
+    margin: 2rem;
+}
+
+div.btn_group {
+    width: 20rem;
+    position: absolute;
+    top: 1rem;
+    left: 30rem;
+}
+
+.form-control {
+    margin: 1rem;
+}
+
+textarea {
+    margin: 1rem;
+}
+
+.container {
+    margin: 5rem 30rem;
+}

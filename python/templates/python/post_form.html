@@ -1,10 +1,15 @@
 {% extends 'python/base.html' %}
 {% block 'main_area' %}
+<div class="form_group">
   <form method="post" enctype="multipart/form-data">{% csrf_token %}
     {{ form.title }}
     {{ form.category }}
     {{ form.subject }}
-    {{ form.content }}
-    <button type="submit">GO!</button>
+    {{ form.content }}<br />
+    <div class="float-right">
+      <button type="submit" class="btn btn-success">작성</button>
+      <a href="/python/"><button type="button" class="btn btn-danger">취소</button></a>
+    </div>
   </form>
+</div>
 {% endblock %}
