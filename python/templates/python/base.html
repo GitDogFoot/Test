@@ -11,12 +11,17 @@
 </head>
 <body>
   <div class="btn_group">
-    <a href="create/"><button type="button" class="btn btn-primary" id="write_button">작성</button></a>
+    <a href="/python/create/"><button type="button" class="btn btn-primary" id="write_button">작성</button></a>
     <a href="/python/"><button type="button" class="btn btn-secondary" id="list_button">리스트 화면</button></a>
   </div>
   <div class="container">
     {% block 'main_area' %}
     {% endblock %}
   </div>
+<script>
+  new FroalaEditor('div#froala-editor-div', {
+    enter: FroalaEditor.ENTER_DIV
+  });
+</script>
 </body>
 </html>

@@ -1,4 +1,5 @@
 from django.db import models
+from froala_editor.fields import FroalaField
 
 
 class Category(models.Model):
@@ -17,7 +18,7 @@ class Category(models.Model):
 
 class Post(models.Model):
   title = models.CharField(max_length=20)
-  content = models.TextField()
+  content = FroalaField()
   created_at = models.DateTimeField(auto_now_add=True)
   updated_at = models.DateTimeField(auto_now=True)
   category = models.ForeignKey(Category, null=True, blank=True, on_delete=models.SET_NULL)
